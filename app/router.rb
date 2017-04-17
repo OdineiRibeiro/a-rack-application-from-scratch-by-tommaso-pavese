@@ -4,7 +4,7 @@ class Router
   end
 
   def route!
-    if klass == controller_class
+    if klass = controller_class
       add_route_info_to_requested_params!
 
       controller  = klass.new @request
