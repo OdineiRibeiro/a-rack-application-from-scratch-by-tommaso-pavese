@@ -15,6 +15,8 @@ class Router
         return controller.public_send action
       end
     end
+
+    not_found
   end
 
   def not_found(msg = 'Not found :(')
