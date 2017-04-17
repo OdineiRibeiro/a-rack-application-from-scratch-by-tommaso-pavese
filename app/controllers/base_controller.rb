@@ -6,16 +6,16 @@ class BaseController
   end
 
   def index
-    body = '
-      <html>
-        <head><title>A Rack Demonho</title></head>
-        <body>
-          <h1>This is the root page</h1>
-          <p>Hello from a controller!</p>
-        </body>
-      </html>
-    '
-
+    body =
+      <<~HTML
+        <html>
+          <head><title>A Rack Demonho</title></head>
+          <body>
+            <h1>This is the root page</h1>
+            <p>Hello from a controller!</p>
+          </body>
+        </html>
+      HTML
     build_response body
   end
 
