@@ -1,1 +1,4 @@
-run Proc.new { |env| ['200', {'Content-Type' => 'text/html'}, ['Hello Rack!']]}
+require './application'
+
+use Rack::Reloader, 0
+run Application.new
